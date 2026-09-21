@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet/model"
-	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet/repository"
+	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet-sample/model"
+	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet-sample/repository"
 )
 
 type OutletService interface {

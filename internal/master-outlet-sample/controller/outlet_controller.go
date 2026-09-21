@@ -4,9 +4,9 @@ import (
 	"strconv"
 
 	"github.com/labstack/echo/v4"
-	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet/dto"
-	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet/model"
-	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet/service"
+	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet-sample/dto"
+	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet-sample/model"
+	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet-sample/service"
 	"github.com/your-org/ums-bff-service-customer-360/pkg/response"
 	"github.com/your-org/ums-bff-service-customer-360/pkg/validator"
 )

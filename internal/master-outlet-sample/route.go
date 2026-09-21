@@ -2,8 +2,8 @@ package masteroutlet
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet/controller"
-	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet/service"
+	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet-sample/controller"
+	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet-sample/service"
 	"github.com/your-org/ums-bff-service-customer-360/internal/middleware"
 )
 

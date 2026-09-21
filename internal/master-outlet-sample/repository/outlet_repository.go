@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet/model"
+	"github.com/your-org/ums-bff-service-customer-360/internal/master-outlet-sample/model"
 )
 
 type OutletRepository interface {
