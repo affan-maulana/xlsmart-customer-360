@@ -12,4 +12,5 @@ func RegisterRoutes(e *echo.Echo, c *client.Client) {
 	grp := e.Group("/api/v1/third-party/nbss")
 
 	grp.GET("/device-specs/:msisdn", ctrl.GetDeviceSpecs)
+	grp.GET("/getMsisdnByNik/:nik", ctrl.GetMsisdnByNik)
 }

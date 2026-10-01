@@ -1,0 +1,52 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "go",
+      "args": ["build", "./..."],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Run Server",
+      "type": "shell",
+      "command": "go",
+      "args": ["run", "./cmd/server"],
+      "group": "none",
+      "problemMatcher": ["$go"],
+      "isBackground": true
+    },
+    {
+      "label": "Test All",
+      "type": "shell",
+      "command": "go",
+      "args": ["test", "./..."],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Vet",
+      "type": "shell",
+      "command": "go",
+      "args": ["vet", "./..."],
+      "group": "none",
+      "problemMatcher": ["$go"]
+    },
+    {
+      "label": "Tidy",
+      "type": "shell",
+      "command": "go",
+      "args": ["mod", "tidy"],
+      "group": "none",
+      "problemMatcher": ["$go"]
+    }
+  ]
+}

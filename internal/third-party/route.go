@@ -10,8 +10,7 @@ import (
 
 func RegisterRoutes(e *echo.Echo, cfg *config.Config) {
 	vqmClient := client.NewClient(cfg.VQMBaseURL)
-	nbssClient := client.NewClient(cfg.NBSSBaseURL)
 
 	vqm.RegisterRoutes(e, vqmClient)
-	nbss.RegisterRoutes(e, nbssClient)
+	nbss.RegisterRoutes(e, vqmClient)
 }

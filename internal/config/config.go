@@ -18,10 +18,9 @@ type Config struct {
 	DBName     string
 	DBSSLMode  string
 
-	JWTSecret string
+	SecretKey string
 
 	VQMBaseURL  string
-	NBSSBaseURL string
 }
 
 func Load() *Config {
@@ -40,10 +39,9 @@ func Load() *Config {
 		DBName:     getEnv("DB_NAME", "ums_bff"),
 		DBSSLMode:  getEnv("DB_SSLMODE", "disable"),
 
-		JWTSecret: getEnv("JWT_SECRET", "your-secret-key"),
+		SecretKey: getEnv("SECRET_KEY", "your-secret-key"),
 
-		VQMBaseURL:  getEnv("VQM_BASE_URL", "http://prod-view-query-manager-svc.comet.svc.cluster.local:7003"),
-		NBSSBaseURL: getEnv("NBSS_BASE_URL", "http://localhost:7005"),
+		VQMBaseURL:  getEnv("VQM_BASE_URL", "http://localhost:8081"),
 	}
 }
 

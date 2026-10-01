@@ -45,3 +45,17 @@ func (ctrl *NBSSController) GetDeviceSpecs(ctx echo.Context) error {
 
 	return ctx.JSON(http.StatusOK, response.Success(mapped, "success"))
 }
+
+func (ctrl *NBSSController) GetMsisdnByNik(ctx echo.Context) error {
+	nik := ctx.Param("nik")
+	res := ctrl.client.Get("/nbss/getMsisdnByNik/" + nik)
+	if !res.Success {
+		return ctx.JSON(http.StatusBadGateway, res)
+	}
+
+	rawBytes, err := json.Marshal(res.Data)
+	if err != nil {
+		return ctx.JSON(http.StatusInternalServerError, response.Error("failed to marshal response data"))
+	}
+	return ctx.JSON(http.StatusOK, response.Success(rawBytes, "success"))
+}
